@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 노말라이즈 */
+* {
+  box-sizing: border-box;
+}
+
+body, ul, li {
+  font-family: "GmarketSansMedium";
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-underline-position: under;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 노말라이즈 종료*/
+html,
+body {
+  font-size: 62.5%;
+}
+
+.top-bar {
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 2px solid #000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-inline: clamp(10px, 2vw, 20px);
+}
+.top-bar .tob-bar__container {
+  display: flex;
+  max-width: 1280px;
+  margin-inline: auto;
+  height: clamp(100px, 9vw, 120px);
+}
+.top-bar .tob-bar__container .top-bar-left {
+  display: flex;
+  align-items: center;
+}
+.top-bar .tob-bar__container .top-bar-right {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-top: 0.75rem;
+}
+.top-bar .logo {
+  display: block;
+  width: clamp(80px, 15vw, 180px);
+  height: clamp(45px, 8vw, 80px);
+  background-image: url("../Images/TRANSYS_logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.util-nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3.5rem;
+}
+.util-nav-list {
+  display: flex;
+  align-items: center;
+}
+.util-nav-link {
+  display: block;
+  color: #555;
+  font-size: 13px;
+  padding-inline: 0.8rem;
+  position: relative;
+}
+.util-nav-link:hover {
+  text-decoration: underline;
+}
+.util-nav-item:not(:last-child) .util-nav-link::after {
+  content: "";
+  position: absolute;
+  background-color: #555;
+  opacity: 0.3;
+  width: 1px;
+  height: 10px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.util-nav .search-btn {
+  width: 34px;
+  height: 34px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top-bar__depth1-menu {
+  padding-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.top-bar__depth1-menu ul {
+  display: flex;
+}
+.top-bar__depth1-menu [class$=list-item]:hover > a {
+  text-decoration: underline;
+}
+.top-bar__depth1-menu .depth1-list-item {
+  width: 120px;
+  text-align: center;
+}
+.top-bar__depth1-menu .depth1-list-item:hover .depth1-list-link {
+  background-color: #fff;
+  color: #2076bb;
+}
+.top-bar__depth1-menu .depth1-list-item:hover .mega-menu {
+  max-height: 300px;
+}
+.top-bar__depth1-menu .depth1-list-link {
+  display: block;
+  padding-top: 10px;
+  padding-inline: 1.1rem;
+  height: 100%;
+  font-size: 15px;
+  color: #333;
+}
+.top-bar__depth1-menu .mega-menu {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  background-color: #2c2a29;
+  transition: max-height 0.3s ease-in-out;
+}
+.top-bar__depth1-menu .mega-menu .mega-menu-inner {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+.top-bar__depth1-menu .mega-menu .depth2-list {
+  display: flex;
+  padding: 0.8rem 0 1rem 0;
+}
+.top-bar__depth1-menu .mega-menu .depth2-list-item {
+  flex-grow: 1;
+  flex-direction: column;
+}
+.top-bar__depth1-menu .mega-menu .depth2-list-item .depth2-list-link {
+  padding-block: 0.6rem;
+  color: #fff;
+  font-size: 16px;
+}
+.top-bar__depth1-menu .mega-menu .depth3-list {
+  flex-direction: column;
+}
+.top-bar__depth1-menu .mega-menu .depth3-list .depth3-list-item .depth3-list-link {
+  color: #999;
+  font-size: 14px;
+}
